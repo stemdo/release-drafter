@@ -45,7 +45,7 @@ jobs:
       #    echo "GHE_HOST=${GITHUB_SERVER_URL##https:\/\/}" >> $GITHUB_ENV
 
       # Drafts your next Release notes as Pull Requests are merged into "master"
-      - uses: release-drafter/release-drafter@v5
+      - uses: release-drafter/release-drafter@v6
         # (Optional) specify config name to use, relative to .github/. Default: release-drafter.yml
         # with:
         #   config-name: my-config.yml
@@ -435,6 +435,5 @@ The command does the following:
 - Runs the `postversion` npm script in [package.json](package.json), which:
   - Runs test
   - Pushes the tag to GitHub, which triggers GitHub Action that does the following:
-    - Push GitHub app to Heroku
     - Releases NPM
     - Publish the Release Draft!
